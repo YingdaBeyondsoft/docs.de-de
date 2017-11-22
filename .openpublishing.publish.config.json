@@ -49,77 +49,41 @@
           "_dependentPackages/ECMA2Yaml/tools/PostBuild.ps1"
         ]
       },
+      "ECMA2Yaml": {
+        "SourceXmlFolder": "dotnet/xml",
+        "OutputYamlFolder": "dotnet/api",
+        "Flatten": true,
+        "id": "dotnet-template"
+      },
+      "SplitTOC": [
+        "dotnet/api/dotnet-template/toc.yml"
+      ],
+      "DiffFolder": [
+        "dotnet/api"
+      ],
       "pdf_build_exclude_tocs": []
     }
   ],
   "notification_subscribers": [],
-  "branches_to_filter": [
-    "live"
-  ],
+  "branches_to_filter": [],
   "git_repository_url_open_to_public_contributors": "https://github.com/dotnet/docs.de-de",
   "git_repository_branch_open_to_public_contributors": "live",
   "continue_with_document_error": true,
   "skip_source_output_uploading": false,
   "need_preview_pull_request": true,
-  "contribution_branch_mappings": {
-    "live-sxs": "live"
-  },
+  "contribution_branch_mappings": {},
   "dependent_repositories": [
     {
       "path_to_root": "_themes",
       "url": "https://github.com/Microsoft/templates.docs.msft.de-de",
-      "branch": "master"
-    },
-    {
-      "path_to_root": "_themes.pdf",
-      "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
-      "branch": "master"
-    },
-    {
-      "path_to_root": "_csharplang",
-      "url": "https://github.com/dotnet/csharplang",
-      "branch": "master"
-    },
-    {
-      "path_to_root": "_vblang",
-      "url": "https://github.com/dotnet/vblang",
-      "branch": "master"
-    },
-    {
-      "path_to_root": "_repo.en-us",
-      "url": "https://github.com/dotnet/docs",
-      "branch": "live",
-      "branch_mapping": {
-        "live": "live",
-        "master": "master"
-      }
-    },
-    {
-      "path_to_root": "dotnet-xref",
-      "url": "https://github.com/MicrosoftDocs/dotnet-xref",
-      "branch": "live",
-      "branch_mapping": {
-        "master": "master",
-        "live": "live"
-      }
+      "branch": "master",
+      "branch_mapping": {}
     }
   ],
-  "branch_target_mapping": {
-    "live": [
-      "Publish",
-      "Pdf"
-    ],
-    "master": [
-      "Publish"
-    ]
-  },
+  "branch_target_mapping": {},
   "need_generate_pdf_url_template": false,
+  "need_generate_pdf": false,
   "need_generate_intellisense": false,
-  "Targets": {
-    "Pdf": {
-      "template_folder": "_themes.pdf"
-    }
-  },
   "dependent_packages": [
     {
       "id": "memberpage.plugins",
@@ -129,6 +93,11 @@
       "version": "latest"
     }
   ],
+  "Targets": {
+    "Pdf": {
+      "template_folder": "_themes.pdf"
+    }
+  },
   "ECMA2Yaml": {
     "SourceXmlFolder": "xml",
     "SourceMetadataFolder": "add\\metadata",
@@ -136,5 +105,4 @@
     "Flatten": true
   },
   "toc_path_need_to_split": "api/toc.yml"
-
 }
